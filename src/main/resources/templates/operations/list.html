@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="library">
+    <table class="table table-bordered table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Description</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book : ${books}">
+            <th th:text="${book.id}" scope="row">#</th>
+            <td th:text="${book.name}">Name</td>
+            <td th:text="${book.author}">Author</td>
+            <td th:text="${book.genre}">Genre</td>
+            <td th:text="${book.description}">Description</td>
+            <td><a th:href="@{'/edit/{id}'(id=${book.id})}" style="text-align: center; justify-content: center"><i class="fas fa-marker"></i></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>

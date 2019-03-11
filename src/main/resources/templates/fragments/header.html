@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="eng"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="header">
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: skyblue ">
+		<a class="navbar-brand mb-0 h1">Library</a>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="btn btn-primary" data-toogle="collapse" href="#" role="button" aria-expanded="false" aria-controls="collapseExample" th:href="@{/new}">New book <span class="sr-only">(current)</span></a>
+			</div>
+		</div>
+	</nav>
+</div>
+</html>
